@@ -1,0 +1,109 @@
+Create new repository under git [20231215_WCBP]
+Optional: Create index.html Hello world:
+> index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2023 West Coast Bacterial Physiology Conference</title>
+    </head>
+    <body>
+        <p>Hello world!</p>
+    </body>
+</html>
+
+Repository > Settings > Pages > Deploy from Master
+Wait a bit
+Link:
+https://schwanbeck.github.io/20231215_WCBP/
+
+Add ssh key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+ssh-keygen -t ed25519 -C "email@umn.edu"
+Leave default file as is
+Set a password
+Start the ssh-agent in the background.
+$ eval "$(ssh-agent -s)"
+> Agent pid 59566
+$ ssh-add ~/.ssh/id_ed25519
+
+Add key:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+$ cat ~/.ssh/id_ed25519.pub
+# Then select and copy the contents of the id_ed25519.pub file
+# displayed in the terminal to your clipboard
+
+Copy output to Github > Settings > Access > New SSH Key
+
+
+Clone repository locally (through ssh):
+git clone git@github.com:schwanbeck/20231215_WCBP.git
+
+git submodule add https://github.com/hakimel/reveal.js.git
+
+# pick a released version, take a look https://github.com/hakimel/reveal.js/releases to select a valid tag
+cd reveal.js && git checkout tags/5.0.2 && cd ..
+
+Add local files:
+git add .
+
+Check status:
+git status
+
+Commit:
+git commit -m "Message"
+Push:
+git push
+
+Edit index.html, update href links to include reference to "reveal.js/"
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>2023 West Coast Bacterial Physiology Conference</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="reveal.js/dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1: Test test</section>
+				<section>Slide 2: 1234</section>
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
+
+
+ffmpeg conversion from weirdly huge .avi to webm w/o sound:
+ffmpeg -i movie4_bb_Ch3_Gs_Delta6201624_Soneidensis_Lactate_152.avi -c:v libvpx-vp9 -an -vsync 2 -crf 25 movie4_Ch3_Gs_Delta16201624_Soneidensis_Lactate_164.webm
+
+QR code (RRGGBBAA -> A: Alpha):
+qrencode -o qrcode.png --foreground=FF8C00 --background=00000000 'https://schwanbeck.github.io/20231215_WCBP/#/'
+
+for file in *.avi; do ffmpeg -i "$file" -c:v libx264 -crf 25 -an -vsync 2 "${file%.avi}.mp4"; done  # Didn't work, output broken
+
+for file in *.avi; do ffmpeg -i "$file" -c:v libvpx-vp9 -an -vsync 2 -crf 23 "${file%.avi}.webm"; done
+
+
