@@ -1,9 +1,354 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>UMN Biofilms & Microbial Communities Club's 2024 Symposium</title>
-    </head>
-    <body>
-        <p>Hello world!</p>
-    </body>
+<!doctype html>
+<!--  -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>2023 West Coast Bacterial Physiology Conference</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="resources/black_theme_modified.css">
+		
+		<!-- Additional css stuff -->
+		<link rel="stylesheet" href="resources/style.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="#131313" >
+					<h3 style="color:#FF8C00; text-shadow: 1px 1px 1px black; margin-bottom: 7%">
+						Making arch microbial rivals<br>become friends
+					</h3>
+					<h5 style="color:#FF8C00; text-shadow: 1px 1px 1px black; font-size: .7em" >
+						Emergent properties of <em>Shewanella&nbsp;oneidensis</em> and <em>Geobacter&nbsp;sulfurreducens</em> mutualistic co-culture on an electrode
+					</h5>
+					<div style="float:left; max-width: 15%; max-height: 15%">
+							<img src="resources/UMN.png" alt style="background:none; border:none; box-shadow:none; ">  <!-- 10px solid transparent; -->
+					</div>
+					
+					<div style="float:right; max-width: 15%; max-height: 15%">
+							<img src="resources/ArmyResearchOffice.png" alt style="background:none; border:none; box-shadow:none; ">  <!-- 10px solid transparent; -->
+					</div>
+					
+					<div style="margin-top: 8%">
+						<div style="float: none; text-shadow: 1px 1px 1px black">
+							<p style="text-shadow: 1px 1px 1px black; ">Julian Schwanbeck</p>
+							<p style="text-shadow: 1px 1px 1px black; font-size: .9em; margin-top: 12%">
+								9th of February 2024<br>Bug Club, St. Paul Campus
+							</p>
+						</div>
+					</div>
+					<aside class="notes">
+						Title slide
+					</aside>
+				</section>
+				
+				<section data-background="#131313">
+<!--					<h4 style="color:darkorange; ">Co-culture Idea</h4>-->
+					<div class="r-stack" style="max-width: 70%; max-height: fit-content; margin: 5% auto auto;">
+<!--						<img src="resources/reactor3.png" alt style="background:none; border:none; box-shadow:none; ">-->
+<!--						<img class="fragment" src="resources/reactor2.png" alt style="background:none; border:none; box-shadow:none; ">-->
+
+							<img class="fragment" src="resources/overview_rocks.png" alt style="background:none; border:none; box-shadow:none; ">
+							<img class="fragment" src="resources/overview_shewanella.png" alt style="background:none; border:none; box-shadow:none; ">
+							<img class="fragment" src="resources/overview_full.png" alt style="background:none; border:none; box-shadow:none; ">
+							<img class="fragment" src="resources/electrode.png" alt style="background:none; border:none; box-shadow:none; ">
+					</div>
+					<aside class="notes">
+						Core page<br>
+						
+					</aside>
+				</section>
+				<section>
+					<section data-background="#131313">
+						<h4 style="color:darkorange; "><em>Shewanella</em>&nbsp;<em>oneidensis</em></h4>
+						<div style="float:right; margin: auto; max-width: 60%; " class="fragment" >
+							<video data-autoplay width="auto" height="auto" muted>
+								<source src="resources/movie7_bb_Ch5_Soneidensis_Lactate_164.webm" type="video/webm; codecs=vp9">
+								Your browser does not support the video tag.
+							</video>
+							<div style="float:none;">
+								<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 37.13 μm</p>
+							</div>
+						</div>
+							
+						
+						<div style="float:left; max-width: 40%; margin: auto" >
+							<div style="float:right; max-width: 80%">
+								<img src="resources/ShewElectrode.png" alt style="background:none; border:none; box-shadow:none; ">
+							</div>
+							<img src="resources/SoneidensisTn7mRFPonLactate_transparent.png" alt style="background:none; border:none; box-shadow:none; ">
+						</div>
+						
+
+						<aside class="notes">
+							Shewanella only, Lactate<br>
+						</aside>
+					</section>
+
+					<section data-background="#131313" data-background-video="resources/movie6_bb_Ch5_Soneidensis_Lactate_164.webm" data-background-size="contain" data-background-video-loop="1">
+						<h4 style="color:darkorange; "><em>Shewanella</em>&nbsp;<em>oneidensis</em> RFP</h4>
+						<div style="margin-top: -5%; margin-left: 0; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em">Both</p>
+							</div>
+							<div style="float:right;">
+								<p style="font-size: .7em; color:#0080FF;">GFP</p>
+							</div>
+						</div>
+						<div style="margin-top: 35%; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em; color:#FF8C00;">RFP</p>
+							</div>
+							<div style="float:left; margin-top: 32%;">
+								<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 37.13 μm</p>
+							</div>
+							<div style="float:right; max-width: 60%">
+								<img src="resources/SoneidensisTn7mRFPonLactate_transparent.png" alt style="background:none; border:none; box-shadow:none; ">
+							</div>
+						</div>
+
+						<aside class="notes">
+							Shewanella only, Lactate<br>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section data-background="#131313">
+						<h4 style="color:#0080FF; "><em>Geobacter</em>&nbsp;<em>sulfurreducens</em> Lac<sup>-</sup></h4>
+						<div style="float:right; margin: auto; max-width: 60%; " class="fragment" data-fragment-index="1">
+							<video data-autoplay width="auto" height="auto" muted>
+								<source src="resources/movie7_bb_Ch1_GsDelta1620-1624_Acetate_143.webm"  type="video/webm; codecs=vp9">
+								Your browser does not support the video tag.
+							</video>
+							<div style="float:none;">
+								<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 81.39 μm</p>
+							</div>
+						</div>
+
+
+						<div style="float:left; max-width: 40%; margin: auto">
+
+							<div style="float:right; max-width: 80%">
+								<img src="resources/GeoElectrode.png" alt style="background:none; border:none; box-shadow:none;">
+							</div>
+
+							<div class="r-stack" style="float:right; max-width: 100%">
+								<img src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onAcetate_transparent_blue.png" alt style="background:none; border:none; box-shadow:none; ">
+								<img class="fragment" data-fragment-index="2" src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onAcetate_transparent_blue_So_comp2.png" alt style="background:none; border:none; box-shadow:none; ">
+							</div>
+						</div>
+					</section>
+					<section data-background="#131313" data-background-video="resources/movie6_bb_Ch1_GsDelta1620-1624_Acetate_143.webm" data-background-size="contain" data-background-video-loop="1">
+						<h4 style="color:#0080FF; "><em>Geobacter</em>&nbsp;<em>sulfurreducens</em> Lac<sup>-</sup> GFP</h4>
+						<div style="margin-top: -5%; margin-left: 0; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em">Both</p>
+							</div>
+							<div style="float:right;">
+								<p style="font-size: .7em; color:#0080FF;">GFP</p>
+							</div>
+						</div>
+						<div style="margin-top: 40%; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em; color:#FF8C00;">RFP</p>
+							</div>
+							<div style="float:left; margin-top: 27%;">
+								<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 81.39 μm</p>
+							</div>
+							<div style="float:right; max-width: 60%;" class="r-stack">
+								<img src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onAcetate_transparent_blue.png" alt style="background:none; border:none; box-shadow:none; ">
+								<img class="fragment" src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onAcetate_transparent_blue_So_comp2.png" alt style="background:none; border:none; box-shadow:none; ">
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section data-background="#131313">
+						<h4 style="color:#0080FF; "><em>Geobacter</em>&nbsp;<em>sulfurreducens</em> Lac<sup>-</sup> on Lactate</h4>
+						<div style="float:right; margin: auto; max-width: 60%; " class="fragment" data-fragment-index="1">
+							<video data-autoplay width="auto" height="auto" muted >
+								<source src="resources/movie7_bb_Ch2_Gs_Delta6201624_Lactate_147.webm" type="video/webm; codecs=vp9">
+								Your browser does not support the video tag.
+							</video>
+							<div style="float:none;">
+								<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 37.64 μm</p>
+							</div>
+						</div>
+
+
+						<div style="float:left; max-width: 40%; margin: auto">
+							<div style="float:right; max-width: 75%">
+								<img src="resources/GeoElectrodeLac.png" alt style="background:none; border:none; box-shadow:none;">
+							</div>
+							<div class="r-stack" style="float:right; max-width: 100%">
+								<img src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent.png" alt style="background:none; border:none; box-shadow:none; ">
+								<img class="fragment" data-fragment-index="2" src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent_both.png" alt style="background:none; border:none; box-shadow:none; ">
+							</div>
+						</div>
+					</section>
+
+					<section data-background="#131313" data-background-video="resources/movie6_bb_Ch2_Gs_Delta6201624_Lactate_147.webm" data-background-size="contain" data-background-video-loop="1">
+						<h4 style="color:#0080FF; "><em>Geobacter</em>&nbsp;<em>sulfurreducens</em> Lac<sup>-</sup> GFP on Lactate</h4>
+						<div style="margin-top: -5%; margin-left: 0; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em">Both</p>
+							</div>
+							<div style="float:right;">
+								<p style="font-size: .7em; color:#0080FF;">GFP</p>
+							</div>
+						</div>
+						<div style="margin-top: 35%; max-width: 100%; ">
+							<div style="float:left;">
+								<p style="font-size: .7em; color:#FF8C00;">RFP</p>
+							</div>
+							<div style="float:right; max-width: 60%" class="r-stack">
+								<div style="float:right; max-width: 80%">
+									<img src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent.png" alt style="background:none; border:none; box-shadow:none; ">
+								</div>
+								<img class="fragment" src="resources/GsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent_both.png" alt style="background:none; border:none; box-shadow:none; ">
+
+							</div>
+						</div>
+						<div style="float:left; margin-top: 32%;">
+							<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 37.64 μm</p>
+						</div>
+						<aside class="notes">
+							Geobacter only, Lactate<br>
+						</aside>
+					</section>
+				</section>
+				<section data-background="#131313" >
+					<h4 style="color:darkorange; " >Cooperating <span style="color: #0080FF;">culture</span></h4>
+					<img src="resources/cocultureComic.png"alt style="background:none; border:none; box-shadow:none; ">
+				</section>
+				<section data-background="#131313" data-background-video="resources/movie7_bb_Ch3_Gs_Delta6201624_Soneidensis_Lactate_152.webm" data-background-size="contain" data-background-video-loop="0">
+				</section>
+				<section data-background="#131313" data-background-video="resources/movie6_bb_Ch3_Gs_Delta6201624_Soneidensis_Lactate_152.webm" data-background-size="contain" data-background-video-loop="0">
+					<h4 style="color:darkorange; " >Cooperating <span style="color: #0080FF;">culture</span></h4>
+					<div style="margin-top: -5%; margin-left: 0; max-width: 100%; ">
+						<div style="float:left;">
+							<p style="font-size: .7em">Both</p>
+						</div>
+						<div style="float:right;">
+							<p style="font-size: .7em; color:#0080FF;">GFP</p>
+						</div>
+						<div style="margin: 5% auto auto;width: 30%; text-align: center">
+							<img src="resources/cocultureComic.png" class="fragment" data-fragment-index="2" alt style="background:none; border:none; box-shadow:none; ">
+						</div>
+					</div>
+					<div style="margin-top: 0; max-width: 100%; ">
+						<div style="float:left;">
+							<p style="font-size: .7em; color:#FF8C00;">RFP</p>
+						</div>
+						<div class="r-stack" style="float:right; max-width: 60%">
+							<img src="resources/SoneidensisTn7mRFPandGsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent.png" alt style="background:none; border:none; box-shadow:none; ">
+							<img src="resources/SoneidensisTn7mRFPandGsulfurreducensDelta16201624Tn7vsfGFP0onLactate_transparent_all_three.png" class="fragment" data-fragment-index="1" alt style="background:none; border:none; box-shadow:none; ">
+						</div>
+					</div>
+					
+						<div style="float:left; margin-top: 29%;">
+							<p style="font-size: .4em;">Dimensions: 288.44 * 288.44 * 63.08 μm</p>
+						</div>
+					<aside class="notes">
+						Co-Culture, Lactate<br>
+					</aside>
+				</section>
+<!--
+				<section>  Outlook 
+					<h4>Outlook</h4>
+					<aside class="notes">
+						Outlook<br>
+						
+					</aside>
+				</section>
+-->
+				
+				 <section data-background="#131313" > <!-- Thank-You -->
+					
+					<div style="margin: auto; width: 1000px; text-align: center">
+						<h3 style="color: darkorange">Thank you for your attention!</h3>
+					</div>
+					<h4 style="">Special thanks to friends & colleagues:</h4>
+					<p style="font-size: .8em">
+						<b>
+							Jeffrey&nbsp;Gralnick,
+							Daniel&nbsp;Bond,
+							Kathleen&nbsp;Conway,
+							Chi&nbsp;Ho&nbsp;Chan,
+							David&nbsp;Hsu,
+							Ivan&nbsp;Ishkov,
+							Sol&nbsp;Choi,
+							Michael&nbsp;Wold,
+							Chana&nbsp;Introlegator,
+							Madeline&nbsp;Ammend,
+							Andrew&nbsp;Grenfell,
+							Ruth&nbsp;Lee,
+							Madison&nbsp;Kalb,
+							Parker&nbsp;Stoddard,
+							Maria&nbsp;Lynch,
+							Brandon&nbsp;Portillo and
+							Laine&nbsp;Ciaramitaro
+
+						</b>
+					</p>
+					<div style="font-size:.5em; margin-top: 3%">
+						<div style="float:right; max-width: 15%; max-height: 15%">
+							<img src="resources/UMN.png" alt style="background:none; border:none; box-shadow:none; ">
+					</div>
+					
+					<div style="float:left; max-width: 15%; max-height: 15%">
+							<img src="resources/ArmyResearchOffice.png" alt style="background:none; border:none; box-shadow:none; ">
+					</div>
+						<p>
+							This work was funded by the Army Research Office<br>Grant agreement Nr: W911NF-22-1-0074.
+						</p>
+						<p>
+							This work was supported by the resources and staff at the University of Minnesota University Imaging Centers (UIC), SCR_020997.
+						</p>
+					</div>
+					<div style="float:right; max-width: 15%; max-height: 15%">
+							<img src="resources/qrcode.png" alt style="background:none; border:none; box-shadow:none; ">
+					</div>
+					<p style="float:right; font-size:.5em; margin: 6.5% auto auto;">
+						schwanbeck.github.io/20231215_WCBP/
+					</p>
+					<div style="float:left; max-width: 25%; max-height: 15%; margin: .8% auto auto">
+							<img src="resources/oopQo.png" alt style="background:none; border:none; box-shadow:none; ">
+					</div>
+					<aside class="notes">
+						Thank you
+					</aside>
+				</section> 
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				controls: false,
+				progress: true,
+				history: false,
+				center: true,
+				slideNumber: 'h.v',
+				transition: 'slide',
+				margin: 0.0,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
